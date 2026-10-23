@@ -220,7 +220,7 @@ extension MenuBarItemManager {
     ) async throws -> InputPauseWaitResult {
         // A short window lets cursor warps slip between the user's own mouse moves
         // when an app churns its items (#750). Default 50 ms; override with:
-        //   defaults write com.stonerl.Thaw inputPauseThresholdMs -int <milliseconds>
+        //   defaults write dev.carlisle.NotchBar inputPauseThresholdMs -int <milliseconds>
         let configuredPause = Duration.milliseconds(max(
             0,
             (Defaults.object(forKey: .inputPauseThresholdMs) as? Int) ?? Defaults.DefaultValue.inputPauseThresholdMs
@@ -266,7 +266,7 @@ extension MenuBarItemManager {
     /// overrides active input.
     ///
     /// On by default at 300 ms; disable with:
-    ///   defaults write com.stonerl.Thaw bulkApplyIdleThresholdMs -int 0
+    ///   defaults write dev.carlisle.NotchBar bulkApplyIdleThresholdMs -int 0
     nonisolated func waitForBulkApplyIdleWindow() async -> Bool {
         let thresholdMs = (Defaults.object(forKey: .bulkApplyIdleThresholdMs) as? Int)
             ?? Defaults.DefaultValue.bulkApplyIdleThresholdMs
@@ -523,7 +523,7 @@ extension MenuBarItemManager {
     ///
     /// Echoes with matching window fields pass through, so the scromble
     /// handshake is unaffected. Kill switch:
-    ///   defaults write com.stonerl.Thaw discardStrayMoveEvents -bool NO
+    ///   defaults write dev.carlisle.NotchBar discardStrayMoveEvents -bool NO
     private nonisolated var discardsStrayMoveEvents: Bool {
         (Defaults.object(forKey: .discardStrayMoveEvents) as? Bool) ?? Defaults.DefaultValue.discardStrayMoveEvents
     }
@@ -534,7 +534,7 @@ extension MenuBarItemManager {
     ///
     /// A mismatch means the coordinates were clamped (the Apple-menu case). It's
     /// always logged; failing early is opt-in because it's unverified on hardware:
-    ///   defaults write com.stonerl.Thaw failFastOnEventWindowMismatch -bool YES
+    ///   defaults write dev.carlisle.NotchBar failFastOnEventWindowMismatch -bool YES
     private nonisolated var failsFastOnEventWindowMismatch: Bool {
         Defaults.bool(forKey: .failFastOnEventWindowMismatch)
     }

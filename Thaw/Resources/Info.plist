@@ -2,14 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NotchBarLocalBuild</key>
+	<true/>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
 			<key>CFBundleURLName</key>
-			<string>com.stonerl.Thaw</string>
+			<string>dev.carlisle.NotchBar</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>thaw</string>
+				<string>notchbar</string>
 			</array>
 		</dict>
 	</array>
@@ -30,14 +32,14 @@
 	<key>ThawLaunchctlExecutableURI</key>
 	<string>file:///bin/launchctl</string>
 	<key>ThawRepositoryURL</key>
-	<string>https://github.com/thaw-app/Thaw</string>
+	<string>https://github.com/carlislelym/NotchBar</string>
 	<key>ThawSkyLightFrameworkPath</key>
 	<string>/System/Library/PrivateFrameworks/SkyLight.framework/SkyLight</string>
 	<key>UTExportedTypeDeclarations</key>
 	<array>
 		<dict>
 			<key>UTTypeIdentifier</key>
-			<string>com.stonerl.Thaw.trigger-priority</string>
+			<string>dev.carlisle.NotchBar.trigger-priority</string>
 			<key>UTTypeDescription</key>
 			<string>Thaw Trigger Priority</string>
 			<key>UTTypeConformsTo</key>

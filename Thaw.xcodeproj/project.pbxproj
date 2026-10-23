@@ -62,7 +62,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7166832A2A767E6A006ABF84 /* Thaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thaw.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7166832A2A767E6A006ABF84 /* NotchBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotchBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7188A6832E27F9ED008F131D /* MenuBarItemService.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = MenuBarItemService.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4PT00012F3A100000000001 /* MenuBarCaptureService.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = MenuBarCaptureService.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2TESTS0012F2C000000001 /* ThawTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThawTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,7 +181,7 @@
 		7166832B2A767E6A006ABF84 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7166832A2A767E6A006ABF84 /* Thaw.app */,
+				7166832A2A767E6A006ABF84 /* NotchBar.app */,
 				7188A6832E27F9ED008F131D /* MenuBarItemService.xpc */,
 				C4PT00012F3A100000000001 /* MenuBarCaptureService.xpc */,
 				E2TESTS0012F2C000000001 /* ThawTests.xctest */,
@@ -226,7 +226,7 @@
 				2C7E9A45F08D3B61C5E8A214 /* SystemPackage */,
 			);
 			productName = Ice;
-			productReference = 7166832A2A767E6A006ABF84 /* Thaw.app */;
+			productReference = 7166832A2A767E6A006ABF84 /* NotchBar.app */;
 			productType = "com.apple.product-type.application";
 		};
 		7188A6822E27F9ED008F131D /* MenuBarItemService */ = {
@@ -720,8 +720,10 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = "2.1.0";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stonerl.Thaw;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.carlisle.NotchBar;
+				PRODUCT_NAME = NotchBar;
+				PRODUCT_MODULE_NAME = Thaw;
+				INFOPLIST_KEY_CFBundleDisplayName = NotchBar;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -761,8 +763,10 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = "2.1.0";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stonerl.Thaw;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.carlisle.NotchBar;
+				PRODUCT_NAME = NotchBar;
+				PRODUCT_MODULE_NAME = Thaw;
+				INFOPLIST_KEY_CFBundleDisplayName = NotchBar;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -789,7 +793,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = "2.1.0";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stonerl.Thaw.MenuBarItemService;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.carlisle.NotchBar.MenuBarItemService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SKIP_INSTALL = YES;
@@ -822,7 +826,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = "2.1.0";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stonerl.Thaw.MenuBarItemService;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.carlisle.NotchBar.MenuBarItemService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SKIP_INSTALL = YES;
@@ -854,7 +858,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = "2.0.0";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stonerl.Thaw.MenuBarCaptureService;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.carlisle.NotchBar.MenuBarCaptureService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SKIP_INSTALL = YES;
@@ -887,7 +891,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = "2.0.0";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stonerl.Thaw.MenuBarCaptureService;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.carlisle.NotchBar.MenuBarCaptureService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SKIP_INSTALL = YES;
@@ -914,13 +918,13 @@
 				INFOPLIST_KEY_NSPrincipalClass = TestBootstrap;
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = "1.3.0-beta.1";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stonerl.ThawTests;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.carlisle.NotchBarTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 6.2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Thaw.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Thaw";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NotchBar.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NotchBar";
 			};
 			name = Debug;
 		};
@@ -937,13 +941,13 @@
 				INFOPLIST_KEY_NSPrincipalClass = TestBootstrap;
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = "1.3.0-beta.1";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stonerl.ThawTests;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.carlisle.NotchBarTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 6.2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Thaw.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Thaw";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NotchBar.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NotchBar";
 			};
 			name = Release;
 		};

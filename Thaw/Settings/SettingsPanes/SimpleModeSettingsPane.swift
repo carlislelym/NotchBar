@@ -29,6 +29,7 @@ struct SimpleModeSettingsPane: View {
 
     var body: some View {
         IceForm {
+            NotchBarQuickStartSection(navigationState: appState.navigationState, hotkeys: appState.settings.hotkeys)
             arrangeSection
             behaviorSection
             appSection

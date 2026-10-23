@@ -10,7 +10,7 @@ import Foundation
 /// Reads and writes ``ExtrasMenuBarProbeMemory``'s contents.
 ///
 /// Stored in the service's own defaults domain
-/// (`com.stonerl.Thaw.MenuBarItemService`), not the app's: it is a
+/// (`dev.carlisle.NotchBar.MenuBarItemService`), not the app's: it is a
 /// measurement, not a user setting, and losing it costs one slow scan.
 nonisolated enum ExtrasMenuBarProbeStore {
     private static let key = "ExtrasMenuBarProbeMisses"

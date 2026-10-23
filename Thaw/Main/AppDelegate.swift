@@ -40,7 +40,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
         // Bound AX messaging before any element exists, or a stalled app blocks
         // us for the six-second default (#767). Override with:
-        //   defaults write com.stonerl.Thaw axMessagingTimeout -float <seconds>
+        //   defaults write dev.carlisle.NotchBar axMessagingTimeout -float <seconds>
         UIElement.defaultMessagingTimeout = Float(
             max(0, (Defaults.object(forKey: .axMessagingTimeout) as? Double) ?? Defaults.DefaultValue.axMessagingTimeout)
         )
@@ -205,7 +205,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         guard
             let urlString = event.paramDescriptor(forKeyword: AEKeyword(keyDirectObject))?.stringValue,
             let url = URL(string: urlString),
-            url.scheme?.lowercased() == "thaw"
+            url.scheme?.lowercased() == "notchbar"
         else { return }
 
         let senderBundleId = extractSenderBundleId(from: event)

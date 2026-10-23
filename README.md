@@ -1,3 +1,5 @@
+> **NotchBar 本地定制版**：使用说明、构建与改动请看 [README-NotchBar.md](README-NotchBar.md)。下面保留上游项目说明。
+
 ![Thaw](https://raw.githubusercontent.com/thaw-app/brand-assets/main/headers/light_header.svg#gh-light-mode-only)
 ![Thaw](https://raw.githubusercontent.com/thaw-app/brand-assets/main/headers/dark_header.svg#gh-dark-mode-only)
 

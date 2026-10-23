@@ -27,7 +27,7 @@ struct UpdatesManagerTests {
 
     /// Read via ``UpdatesManager/storedUpdateChannel(on:)`` because the
     /// `updateChannel` getter withholds alpha on a supported macOS.
-    @Test("Accepting the alert subscribes to beta")
+    @Test("The compatibility alert follows the build update policy")
     func acceptingTheAlertSubscribesToBeta() throws {
         try withScratchDefaults { _ in
             let manager = manager { _ in }
@@ -37,7 +37,8 @@ struct UpdatesManagerTests {
                 minorVersion: 0,
                 patchVersion: 0
             )
-            #expect(UpdatesManager.storedUpdateChannel(on: unsupported) == .beta)
+            #expect(UpdatesManager.storedUpdateChannel(on: unsupported) ==
+                (manager.supportsAutomaticUpdates ? .beta : .stable))
         }
     }
 

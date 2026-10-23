@@ -13,7 +13,7 @@ nonisolated enum Defaults {
     /// The store every accessor below reads and writes.
     ///
     /// Production leaves it `.standard`. Tests point it at a scratch suite so they
-    /// don't rewrite the user's `com.stonerl.Thaw` domain, which per-key
+    /// don't rewrite the user's `dev.carlisle.NotchBar` domain, which per-key
     /// snapshot/restore can't protect once tests run in parallel. `UserDefaults` is
     /// thread-safe; the unchecked annotation covers only reassignment in test setup.
     static nonisolated(unsafe) var store: UserDefaults = .standard
@@ -450,7 +450,7 @@ nonisolated extension Defaults {
         /// is rejected. Inferred from field logs, not confirmed on a live bar, so opt-in.
         ///
         /// Enable with:
-        ///   defaults write com.stonerl.Thaw faithfulDragMoves -bool YES
+        ///   defaults write dev.carlisle.NotchBar faithfulDragMoves -bool YES
         ///
         /// Hidden diagnostic flag; not exposed in Settings. Default: false.
         case faithfulDragMoves = "faithfulDragMoves"

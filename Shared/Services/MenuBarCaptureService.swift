@@ -15,7 +15,7 @@ import Foundation
 /// exists so that leak can be reclaimed by exiting the helper. Visible-section
 /// icons stay on ScreenCaptureKit in the app; Always Hidden stays at 1 fps.
 nonisolated enum MenuBarCaptureService {
-    static let name = "com.stonerl.Thaw.MenuBarCaptureService"
+    static let name = "dev.carlisle.NotchBar.MenuBarCaptureService"
 
     /// Exit after this many successful SkyLight composites.
     ///

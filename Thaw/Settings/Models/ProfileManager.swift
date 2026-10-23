@@ -121,7 +121,7 @@ final class ProfileManager {
         focusFilterActivatedTask?.cancel()
         focusFilterActivatedTask = debouncedNotificationTask(
             center: DistributedNotificationCenter.default(),
-            name: Notification.Name("com.stonerl.Thaw.focusFilterActivated"),
+            name: Notification.Name("dev.carlisle.NotchBar.focusFilterActivated"),
             interval: .seconds(0.5)
         ) { [weak self] in
             await self?.applyFocusFilterProfile()
@@ -131,7 +131,7 @@ final class ProfileManager {
         focusFilterDeactivatedTask?.cancel()
         focusFilterDeactivatedTask = debouncedNotificationTask(
             center: DistributedNotificationCenter.default(),
-            name: Notification.Name("com.stonerl.Thaw.focusFilterDeactivated"),
+            name: Notification.Name("dev.carlisle.NotchBar.focusFilterDeactivated"),
             interval: .seconds(0.5)
         ) { [weak self] in
             await self?.handleFocusFilterDeactivated()

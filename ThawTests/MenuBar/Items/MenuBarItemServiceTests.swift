@@ -17,7 +17,7 @@ struct MenuBarItemServiceTests {
 
     @Test("The service name is the reverse-DNS Mach service identifier")
     func serviceName() {
-        #expect(MenuBarItemService.name == "com.stonerl.Thaw.MenuBarItemService")
+        #expect(MenuBarItemService.name == "dev.carlisle.NotchBar.MenuBarItemService")
     }
 
     // MARK: - Request Tests

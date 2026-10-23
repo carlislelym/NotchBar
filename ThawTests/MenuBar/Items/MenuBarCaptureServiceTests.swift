@@ -14,7 +14,7 @@ import Testing
 struct MenuBarCaptureServiceTests {
     @Test("The service name is the reverse-DNS Mach service identifier")
     func serviceName() {
-        #expect(MenuBarCaptureService.name == "com.stonerl.Thaw.MenuBarCaptureService")
+        #expect(MenuBarCaptureService.name == "dev.carlisle.NotchBar.MenuBarCaptureService")
     }
 
     @Test("A capture batch request survives a round trip")

@@ -34,9 +34,14 @@ struct AboutSettingsPane: View {
                     .padding(.vertical, 8)
             }
             IceSection("Updates") {
-                automaticallyCheckForUpdates
-                automaticallyDownloadUpdates
-                updateChannel
+                if updatesManager.supportsAutomaticUpdates {
+                    automaticallyCheckForUpdates
+                    automaticallyDownloadUpdates
+                    updateChannel
+                } else {
+                    Text("NotchBar 是基于 Thaw 的本地定制版。更新通过你的 fork 构建，不会自动替换为上游版本。")
+                        .foregroundStyle(.secondary)
+                }
                 checkForUpdates
             }
         }

@@ -176,6 +176,7 @@ $(SRCROOT)/Thaw/Settings/Models/SectionDividerStyle.swift
 $(SRCROOT)/Thaw/Settings/Models/SettingsResetter.swift
 $(SRCROOT)/Thaw/Settings/Models/ThawFocusModeStore.swift
 $(SRCROOT)/Thaw/Settings/Models/TriggerFeatureFlags.swift
+$(SRCROOT)/Thaw/Settings/NotchBarQuickStartSection.swift
 $(SRCROOT)/Thaw/Settings/Search/SearchIndex.swift
 $(SRCROOT)/Thaw/Settings/Search/SearchModel.swift
 $(SRCROOT)/Thaw/Settings/Search/SearchRanker.swift
@@ -259,6 +260,7 @@ $(SRCROOT)/Thaw/Utilities/MacOSCompatibilityWarning.swift
 $(SRCROOT)/Thaw/Utilities/MaintenanceTools.swift
 $(SRCROOT)/Thaw/Utilities/Migration.swift
 $(SRCROOT)/Thaw/Utilities/MouseHelpers.swift
+$(SRCROOT)/Thaw/Utilities/NotchBarDefaults.swift
 $(SRCROOT)/Thaw/Utilities/PowerSourceMonitor.swift
 $(SRCROOT)/Thaw/Utilities/PowerState.swift
 $(SRCROOT)/Thaw/Utilities/Predicates.swift

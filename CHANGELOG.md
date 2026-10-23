@@ -1,3 +1,8 @@
+# NotchBar local edition
+
+- 默认在菜单栏下方以六列面板展开隐藏图标，提供中文快速入口及展开、搜索快捷键。
+- 独立应用身份与配置；本地版更新转向 fork，间距变更不自动重启其他应用。
+
 # Changelog
 
 All notable changes to Thaw are documented here. Format follows

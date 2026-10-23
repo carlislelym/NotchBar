@@ -495,7 +495,7 @@ actor SourcePIDCache {
         }
 
         let ccBundleID = "com.apple.controlcenter"
-        let thawBundleID = "com.stonerl.Thaw"
+        let thawBundleID = "dev.carlisle.NotchBar"
         var appsChecked = 0
         var appsWithBar = 0
         var appsSkipped = 0

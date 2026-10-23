@@ -18,6 +18,11 @@ enum ThawMain {
         guard !LayoutResetCommand.runIfRequested() else {
             return
         }
+        do {
+            try NotchBarDefaults.register(in: .standard)
+        } catch {
+            NSLog("NotchBar could not load its initial settings: %@", error.localizedDescription)
+        }
         IceApp.main()
     }
 }

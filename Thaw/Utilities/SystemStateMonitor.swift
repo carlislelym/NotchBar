@@ -466,7 +466,7 @@ final class SystemStateMonitor: ObservableObject {
                     self?.setNetworkConnected(connected)
                 }
             }
-            monitor.start(queue: DispatchQueue(label: "com.stonerl.Thaw.networkMonitor"))
+            monitor.start(queue: DispatchQueue(label: "dev.carlisle.NotchBar.networkMonitor"))
             pathMonitor = monitor
         } else if !enabled, let monitor = pathMonitor {
             monitor.cancel()

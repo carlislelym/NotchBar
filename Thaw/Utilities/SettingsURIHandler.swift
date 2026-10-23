@@ -1261,16 +1261,16 @@ enum SettingsURIHandler {
 
 extension Notification.Name {
     /// Posted when a setting is changed externally via Settings URI scheme.
-    static let settingsDidChangeViaURI = Notification.Name("com.stonerl.Thaw.settingsDidChangeViaURI")
+    static let settingsDidChangeViaURI = Notification.Name("dev.carlisle.NotchBar.settingsDidChangeViaURI")
 
     /// Posted when a per-display setting is changed externally via Settings URI scheme.
-    static let perDisplaySettingsDidChangeViaURI = Notification.Name("com.stonerl.Thaw.perDisplaySettingsDidChangeViaURI")
+    static let perDisplaySettingsDidChangeViaURI = Notification.Name("dev.carlisle.NotchBar.perDisplaySettingsDidChangeViaURI")
 
     /// Posted when a get request response is broadcast via distributed notification.
-    static let settingsURIGetResponse = Notification.Name("com.stonerl.Thaw.settingsURIGetResponse")
+    static let settingsURIGetResponse = Notification.Name("dev.carlisle.NotchBar.settingsURIGetResponse")
 
     /// Posted when the Settings URI whitelist changes.
-    static let settingsURIWhitelistDidChange = Notification.Name("com.stonerl.Thaw.settingsURIWhitelistDidChange")
+    static let settingsURIWhitelistDidChange = Notification.Name("dev.carlisle.NotchBar.settingsURIWhitelistDidChange")
 }
 
 // MARK: - ExternalSettingsChange

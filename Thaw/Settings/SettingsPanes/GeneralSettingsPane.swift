@@ -22,6 +22,7 @@ struct GeneralSettingsPane: View {
 
     var body: some View {
         IceForm {
+            NotchBarQuickStartSection(navigationState: appState.navigationState, hotkeys: appState.settings.hotkeys)
             IceSection {
                 appOptions
             }

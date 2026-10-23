@@ -18,6 +18,10 @@ final class UpdatesManager: NSObject {
     /// A Boolean value that indicates whether the user can check for updates.
     var canCheckForUpdates = false
 
+    var supportsAutomaticUpdates: Bool {
+        Bundle.main.object(forInfoDictionaryKey: "NotchBarLocalBuild") as? Bool != true
+    }
+
     /// The date of the last update check.
     var lastUpdateCheckDate: Date?
 
@@ -145,6 +149,10 @@ final class UpdatesManager: NSObject {
     /// Performs the initial setup of the manager.
     func performSetup(with appState: AppState) {
         self.appState = appState
+        guard supportsAutomaticUpdates else {
+            canCheckForUpdates = true
+            return
+        }
         _ = updaterController
         // A `SUFeedURL` user-defaults entry would otherwise take precedence
         // over Info.plist and silently redirect update checks; the delegate's
@@ -155,7 +163,7 @@ final class UpdatesManager: NSObject {
 
     /// Starts the updater if it hasn't been started yet.
     func startUpdaterIfNeeded() {
-        guard !hasStartedUpdater else {
+        guard supportsAutomaticUpdates, !hasStartedUpdater else {
             return
         }
         hasStartedUpdater = true
@@ -181,6 +189,10 @@ final class UpdatesManager: NSObject {
 
     /// Checks for app updates.
     @objc func checkForUpdates() {
+        guard supportsAutomaticUpdates else {
+            openURL(Constants.repositoryURL)
+            return
+        }
         #if DEBUG
             // Checking for updates hangs in debug mode.
             let alert = NSAlert()
@@ -205,6 +217,10 @@ final class UpdatesManager: NSObject {
     /// check runs in the background, so the user only sees the new build
     /// or the releases page.
     func checkForBetaUpdateAfterCompatibilityWarning() {
+        guard supportsAutomaticUpdates else {
+            openURL(Constants.repositoryURL)
+            return
+        }
         beginCompatibilityCheck()
         #if DEBUG
             // Checking for updates hangs in debug mode, so the promise is

@@ -92,7 +92,7 @@ final class EnergyModeMonitor {
         guard
             let store = SCDynamicStoreCreate(
                 nil,
-                "com.stonerl.Thaw.energyMode" as CFString,
+                "dev.carlisle.NotchBar.energyMode" as CFString,
                 callback,
                 &context
             )
@@ -128,7 +128,7 @@ final class EnergyModeMonitor {
     /// notification, and a dynamic store session is a port pair. Only ever polled.
     private static let readStore: SCDynamicStore? = SCDynamicStoreCreate(
         nil,
-        "com.stonerl.Thaw.energyModeRead" as CFString,
+        "dev.carlisle.NotchBar.energyModeRead" as CFString,
         nil,
         nil
     )

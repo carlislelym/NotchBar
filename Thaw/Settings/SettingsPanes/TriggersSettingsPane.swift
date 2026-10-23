@@ -63,7 +63,7 @@ private struct TriggerDropIndicator: Equatable {
 }
 
 private extension UTType {
-    static let thawTriggerPriority = UTType(exportedAs: "com.stonerl.Thaw.trigger-priority")
+    static let thawTriggerPriority = UTType(exportedAs: "dev.carlisle.NotchBar.trigger-priority")
 }
 
 func clearTriggerEditorFocus(_ focusedField: FocusState<String?>.Binding) {
